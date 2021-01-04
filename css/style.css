@@ -40,7 +40,7 @@ header{
     color: black;
     font-family: 'Russo One', sans-serif;
     position: relative;
-    font-size: 65px;
+    font-size: 50px;
     text-shadow: 0px 0px 12px white;
     margin-left:8vw;
     cursor: pointer;
@@ -58,7 +58,7 @@ header{
 }
 #topHeaderContent ul li{
     display: inline;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 .menuLines{
@@ -71,8 +71,8 @@ header{
     #topHeaderContent ul li:nth-child(7),
     #topHeaderContent ul li:nth-child(9),
     #topHeaderContent ul li:nth-child(11){
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 #topHeaderContent ul li:first-child:hover, 
     #topHeaderContent ul li:nth-child(3):hover,
@@ -80,7 +80,7 @@ header{
     #topHeaderContent ul li:nth-child(7):hover,
     #topHeaderContent ul li:nth-child(9):hover,
     #topHeaderContent ul li:nth-child(11):hover{
-    padding-bottom: 30px;
+    padding-bottom: 2px;
     border-bottom: 3px solid cyan;
 }
 #headerColorfulLine{
@@ -90,8 +90,6 @@ header{
     border-bottom:2px solid white;
 }
 
-
-
 #middleHeader{
     height: 85vh;
     display: flex;
@@ -99,15 +97,21 @@ header{
 }
 header img{
     width: 100%;
-    height: inherit;
+    width: inherit;
 }
 #headerImageFilter{
     background-image: linear-gradient(to right, red, blue , blue , blue , blue ,red);
-    opacity: .1;
+    background-image: url("../images/stadiumPic5.jpg");
+    background-position:center;
+    min-height: 580px;
     position: absolute;
     width: 100%;
-    height: inherit;
+    margin-bottom: 30px;
+    
 }
+
+
+
 #headerImageText{
     position: absolute;
     margin: 38vh 22vw;
@@ -145,7 +149,7 @@ main{
     padding-bottom:40px;
 }
 .main_box_header_heading, .slideshow_header_text{
-    height: 88px;
+    height: 90px;
     display: flex;
     align-items: center;
     font-size: 45px;
@@ -200,17 +204,12 @@ main{
     font-size: 27px;
 }
 
-
-
-
-
-
 /*Contact-Box*/
 #contactBox{
-    height: 20vh;
+    height: 30vh;
     width: 100%;
     background-color:#222142;
-    margin-top: 130px;
+    margin-top: 255px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -223,7 +222,7 @@ main{
     font-family: Arial;
 }
 #contactBox :last-child{
-    font-size: 40px;
+    font-size: 30px;
     font-family: Arial;
     font-weight: bold;
     background-color: seagreen;
@@ -261,11 +260,6 @@ main{
     font-size: 30px;
 }
 
-
-
-
-
-
 /*FOOTER*/
 
 footer{
@@ -276,5 +270,13 @@ footer{
 }
 
 footer a{
-	color: #fff;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(max-width: 720px){
+    #headerImageFilter{
+        width: 100%;
+        float:none;
+    }
 }
