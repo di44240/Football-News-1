@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.logo h3{
+    color: black;
+    font-family: 'Russo One', sans-serif;
+    position: relative;
+    font-size: 50px;
+    text-shadow: 0px 0px 12px white;
+    margin-left:8vw;
+    cursor: pointer;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_container{
+	position: relative;
+}
+
+/* Navigation Bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navbar_items ul li{
+	margin: 0 12px;
+}
+
+.navbar_items ul li a{
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.navbar_items ul{
+	display: flex;
+}
+
+.logo ul a{
+    color:white;
+    text-decoration: none;
+}
+.logo ul li{
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menuLines{
+    font-size: 25px;
+    color: cyan;
+}
+
+.logo ul li:first-child, 
+.navbar_items ul li:nth-child(3),
+.navbar_items ul li:nth-child(3),
+.navbar_items ul li:nth-child(5),
+.navbar_items ul li:nth-child(9){
+    padding-right: 3px;
+    padding-left: 10px;
+}
+
+.logo ul li:first-child:hover, 
+.navbar_items ul li:nth-child(1):hover,
+.navbar_items ul li:nth-child(3):hover,
+.navbar_items ul li:nth-child(5):hover,
+.navbar_items ul li:nth-child(9):hover{
+    padding-bottom: 4px;
+    border-bottom: 3px solid cyan;
+}
+
+/* banner_image */
+.banner_image{
+	background: url('images/stadiumPic1.jpg') no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 900px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#content{
+	margin-top: 60px;
+    position: absolute;
+    width: 30vw;
+    padding: 0px 0px 80px;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#contactFormHeader{
+    min-height: 40px;
+    background-color: #3547e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    font-size: 25px;
+    color: white;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 10px 0px;
+}
+#contactFormContainer{
+    font-family: Arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contactFormContainer select{
+    width: 313px;
+    color:rgb(104, 104, 104);
+}
+#contactFormContainer p{
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+#submit{
+    padding: 10px 20px;
+    background-color: #e52600;
+    border: 0;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+@media (max-width: 720px){
+
+	.navbar{
+		height: auto;
+		flex-direction: column;
+	}
+
+	.logo{
+		margin-bottom: 25px;
+	}
+
+	.navbar_items ul{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar_items ul li{
+		margin-bottom:5px;
+	}
+
+	.banner_content{
+		margin-top: 35px;
+	}
+
+}

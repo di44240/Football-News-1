@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.logo h3{
+    color: black;
+    font-family: 'Russo One', sans-serif;
+    position: relative;
+    font-size: 50px;
+    text-shadow: 0px 0px 2px white;
+    margin-left:7vw;
+    cursor: pointer;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: Arial;
+}
+
+.main_container{
+	position: relative;
+}
+
+/* Navigation Bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+
+
+.navbar_items ul li{
+	font-size: 12px;
+	margin: 0 12px;
+}
+
+.navbar_items ul li a{
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+}
+
+.navbar_items ul{
+	display: flex;
+}
+
+.logo ul a{
+    color:white;
+    text-decoration: none;
+}
+.logo ul li{
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menuLines{
+    font-size: 25px;
+    color: cyan;
+}
+
+.logo ul li:first-child, 
+.navbar_items ul li:nth-child(1),
+.navbar_items ul li:nth-child(3),
+.navbar_items ul li:nth-child(5),
+.navbar_items ul li:nth-child(9){
+    padding-right: 3px;
+    padding-left: 10px;
+}
+
+.logo ul li:first-child:hover, 
+.navbar_items ul li:nth-child(1):hover,
+.navbar_items ul li:nth-child(3):hover,
+.navbar_items ul li:nth-child(5):hover,
+.navbar_items ul li:nth-child(7):hover,
+.navbar_items ul li:nth-child(9):hover{
+    padding-bottom: 4px;
+    border-bottom: 3px solid cyan;
+}
+
+
+
+#pleague{
+	background-image: url("table.images/pleague.jpg") ;
+	background-size: cover ;
+	padding: 10px;
+	margin: 0;
+	padding-top: 37px;
+    
+}
+#laliga{
+	background-image: url("table.images/laliga.jpg") ;
+	background-size: cover ;
+	padding: 10px;
+	margin: 0;
+    
+}
+#seriea{
+	background-image: url("table.images/seriea.jpg") ;
+	background-size: cover ;
+	padding: 10px;
+	margin: 0;
+    
+}
+#bundesliga{
+	background-image: url("table.images/bundesliga.jpg") ;
+	background-size: cover ;
+	padding: 10px;
+	margin: 0;
+    
+}
+#lig1{
+	background-image: url("table.images/lig1.jpg") ;
+	background-size: cover ;
+	padding: 10px;
+	margin: 0;
+    
+}
+
+.ptable table{
+	margin: 30px auto;
+	border-collapse: collapse;
+	bottom: 0; 
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.8);
+  color: #f1f1f1;
+	
+}
+
+.ptable{
+	margin: 0px 0% 0 0%;
+	
+}
+
+th, td {
+	padding: 6px 8px 6px 8px;
+	border-bottom: 1px solid #FFFFFF;
+	text-align: center;
+	color:white;
+}
+
+
+th{
+	
+ 
+  background: rgba(0, 0, 0, 0.8);
+  color: #f1f1f1;
+}
+
+.headin{
+	text-align: center;
+    text-decoration: none;
+	background: rgb(0, 0, 0); 
+	background: rgba(0, 0, 0, 0.8);
+	color: #f1f1f1;
+	margin: 50px 400px 30px 400px;
+	display: block;
+	border-radius: 20px;
+	padding: 8px;
+}
+
+.wpos:hover{
+	background-color: rgb(144, 241, 124);
+}
+
+.wpos:hover td{
+	color:black;
+}
+
+.pos:hover{
+	background-color: white;
+}
+
+.pos:hover td{
+	color: black;
+}
