@@ -17,11 +17,11 @@
 		</div>
 		<div class="navbar_items">
 			<ul>
-				<li><a href="index.html">News</a></li>
+				<li><a href="index.php">News</a></li>
 				<li class="menuLines">|</li>
-				<li><a href="aboutus - index.html">About Us</a></li>
+				<li><a href="About Us.php">About Us</a></li>
 				<li class="menuLines">|</li>
-				<li><a href="login.html">Your Account</a></li>
+				<li><a href="login.php">Your Account</a></li>
 				<li class="menuLines">|</li>				
 			</ul>
 		</div>

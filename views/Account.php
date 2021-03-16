@@ -5,8 +5,8 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <title>Football News | Tables</title>
-            <link rel="icon" type="image/x-icon" href="table.images/logo1.png"/>
-            <link rel="stylesheet" href="account.css">
+            <link rel="icon" type="image/x-icon" href="../table.images/logo1.png"/>
+            <link rel="stylesheet" href="../css/account.css">
         </head>
 
 <body>
@@ -17,11 +17,11 @@
                 </div>
                 <div class="navbar_items">
                     <ul>
-                        <li><a href="../index.html">News</a></li>
+                        <li><a href="index.php">News</a></li>
                         <li class="menuLines">|</li>
-                        <li><a href="../aboutus - index.html">About Us</a></li>
+                        <li><a href="About Us.php">About Us</a></li>
                         <li class="menuLines">|</li>
-                        <li><a href="../login.html">Your Account</a></li>
+                        <li><a href="Account.php">Your Account</a></li>
                         <li class="menuLines">|</li>				
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
         </video>
         </div>
 
-<script src="account.js"></script>
+<script src="../js/account.js"></script>
 
 </body>
 </html>

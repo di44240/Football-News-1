@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Football News | About Us</title>
         <link rel="icon" type="image/x-icon" href="images/logo1.png"/>
-        <link rel="stylesheet" href="aboutus-styles.css">
+        <link rel="stylesheet" href="../css/aboutus-styles.css">
 </head>
 	
 <body>
@@ -18,17 +18,17 @@
 		</div>
 		<div class="navbar_items">
 			<ul>
-				<li><a href="index.html">news</a></li>
+				<li><a href="index.php">news</a></li>
 				<li class="menuLines">|</li>
-				<li><a href="aboutus - index.html">about us</a></li>
+				<li><a href="aboutus - index.php">about us</a></li>
 				<li class="menuLines">|</li>
-				<li><a href="table/tables.html">tables</a></li>
+				<li><a href="table/tables.php">tables</a></li>
 				<li class="menuLines">|</li>
 				<li><a href="#league">Leagues and Champ</a></li>
 				<li class="menuLines">|</li>
 				<li><a href="#transfer">transfer</a></li>
 				<li class="menuLines">|</li>
-				<li><a href="login.html">Your Account</a></li>
+				<li><a href="login.php">Your Account</a></li>
 
 			</ul>
 		</div>
