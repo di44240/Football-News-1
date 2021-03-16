@@ -10,23 +10,7 @@
 
 <body>
 
-    <header>
-	    <div class="navbar">
-                <div class="logo">
-                    <a href="#"><h3>Football News</h3></a>
-                </div>
-                <div class="navbar_items">
-                    <ul>
-                        <li><a href="index.php">News</a></li>
-                        <li class="menuLines">|</li>
-                        <li><a href="About Us.php">About Us</a></li>
-                        <li class="menuLines">|</li>
-                        <li><a href="Account.php">Your Account</a></li>
-                        <li class="menuLines">|</li>				
-                    </ul>
-                </div>
-            </div>
-    </header>
+    <?php include "../includes/header.php" ?>
         
 
        <!-- <div class="bodynav" >

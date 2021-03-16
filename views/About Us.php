@@ -12,27 +12,7 @@
 
 <div class="main_container" id="home">
 	
-	<div class="navbar">
-		<div class="logo">
-			<a href="#"><h3>Football News</h3></a>
-		</div>
-		<div class="navbar_items">
-			<ul>
-				<li><a href="index.php">news</a></li>
-				<li class="menuLines">|</li>
-				<li><a href="aboutus - index.php">about us</a></li>
-				<li class="menuLines">|</li>
-				<li><a href="table/tables.php">tables</a></li>
-				<li class="menuLines">|</li>
-				<li><a href="#league">Leagues and Champ</a></li>
-				<li class="menuLines">|</li>
-				<li><a href="#transfer">transfer</a></li>
-				<li class="menuLines">|</li>
-				<li><a href="login.php">Your Account</a></li>
-
-			</ul>
-		</div>
-	</div>
+	<?php include "../includes/header.php" ?>
 
 	<div class="banner_image">
 		<div class="banner_content">
@@ -50,21 +30,21 @@
 		<h1 class="title">Our Missions</h1>
 		<div class="diff_about">
 			<div class="about_item">
-				<img src="images/v2.png" alt="about_image">
+				<img src="../images/v2.png" alt="about_image">
 				<h3 class="sub_title">Our Story</h3>
 				<p><big>Football</big>, also known as soccer (in Canada and the United States), is a team sport played with a spherical ball between two teams of 11 players. It is played by approximately 250 million players in over 200 countries and dependencies, making it the world's most popular sport. The game is played on a rectangular field called a pitch with a goal at each end. The object of the game is to outscore the opposition by moving the ball beyond the goal line into the opposing goal. The team with the higher number of goals wins the game.
 				</p>
 				
 				</div>
 			<div class="about_item">
-				<img src="images/111.jpg" alt="about_image">
+				<img src="../images/111.jpg" alt="about_image">
 				<h3 class="sub_title">Football & History</h3>
 				<p>Football is played in accordance with a set of rules known as the Laws of the Game. The ball is 68–70 cm (27–28 in) in circumference and known as the football. The two teams each compete to get the ball into the other team's goal (between the posts and under the bar), thereby scoring a goal. The team that has scored more goals at the end of the game is the winner; if both teams have scored an equal number of goals then the game is a draw. Each team is led by a captain who has only one official responsibility as mandated by the Laws of the Game: to represent their team in the coin toss prior to kick-off or penalty kicks.
 				</p>
 				
 				</div>
 			<div class="about_item">
-				<img src="images/22..jpg" alt="about_image">
+				<img src="../images/22..jpg" alt="about_image">
 				<h3 class="sub_title">Rules</h3>
 				<p>
 					Players are not allowed to touch the ball with hands or arms while it is in play, except for the goalkeepers within the penalty area. Other players mainly use their feet to strike or pass the ball, but may also use any other part of their body except the hands and the arms. The team that scores most goals by the end of the match wins. If the score is level at the end of the game, either a draw is declared or the game goes into extra time or a penalty shootout depending on the format of the competition.
