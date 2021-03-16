@@ -1,3 +1,52 @@
+<?php
+    require '../controllers/UserController.php';
+if(isset($_POST['register-submit'])) {
+      $data = [
+          'name' => trim($_POST['name']),
+          'email' => trim($_POST['email']),
+          'password' => trim($_POST['password']),
+          'nameError' => '',
+          'emailError' => '',
+          'passwordError' => ''
+      ];
+
+    $nameValidation = "/^[a-zA-Z]*$/";
+    $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+
+    //Validate first name on letters
+    if (empty($data['name'])) {
+        $data['nameError'] = 'Please enter your first name.';
+    } elseif (!preg_match($nameValidation, $data['name'])) {
+        $data['nameError'] = 'First name can only contain letters.';
+    }
+    // Validate password on length, numeric values,
+    if(empty($data['password'])){
+        $data['passwordError'] = 'Please enter password.';
+      } elseif(strlen($data['password']) < 6){
+        $data['passwordError'] = 'Password must be at least 8 characters';
+      } elseif (preg_match($passwordValidation, $data['password'])) {
+        $data['passwordError'] = 'Password must be have at least one letter.';
+      }
+
+    //Validate email
+    if (empty($data['email'])) {
+        $data['emailError'] = 'Please enter your email.';
+    } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        $data['emailError'] = 'Please enter the correct format.';
+    }
+  }
+    // Make sure that errors are empty
+    if (empty($data['nameError']) && empty($data['emailError']) && empty($data['passwordError'])) {
+  
+
+        $user = new UserController;
+
+        if(isset($_POST['register-submit'])) {
+            $user->store($_POST);
+        }
+    }
+    
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -19,10 +68,26 @@
                     <ul>
                         <li><a href="index.php">News</a></li>
                         <li class="menuLines">|</li>
-                        <li><a href="About Us.php">About Us</a></li>
+                        <li><a href="(DI)aboutus - index.php">About Us</a></li>
                         <li class="menuLines">|</li>
-                        <li><a href="Account.php">Your Account</a></li>
-                        <li class="menuLines">|</li>				
+                        <li><a href="account.php">Your Account</a></li>
+                        <li class="menuLines">|</li>
+                        <?php
+                        if(isset($_SESSION['name']) && $_SESSION['roli']==1){
+                            ?>
+                        <li><a href="dashboard.php">Dashboard</a></li>
+                        <li class="menuLines">|</li>
+                        <?php
+                            }
+                        ?>		
+                        <?php
+                        if(isset($_SESSION['name'])){
+                            ?>
+                        <li><a href="../businessLogic/logout.php">Sign out</a></li>
+                        <li class="menuLines">|</li>	
+                        <?php
+                            }
+                        ?>			
                     </ul>
                 </div>
             </div>
@@ -30,21 +95,30 @@
     <div id="main">
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form method="post">
                     <h1>Create Account</h1>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button>Sign Up</button>
+                    <input type="text" placeholder="Name"  name="name"/>
+                    <?php if(isset($data['nameError'])){?>
+                        <p style="color:red; margin-bottom: 0px; margin-top: 0px;"><?php echo $data['nameError'];?></p>
+                        <?php } ?>
+                    <input type="email" placeholder="Email"  name="email"/>
+                    <?php if(isset($data['emailError'])){?>
+                        <p style="color:red; margin-bottom: 0px; margin-top: 0px;"><?php echo $data['emailError'];?></p>
+                        <?php } ?>
+                    <input type="password" placeholder="Password"  name="password"/>
+                    <?php if(isset($data['passwordError'])){?>
+                        <p style="color:red; margin-bottom: 0px; margin-top: 0px;"><?php echo $data['passwordError'];?></p>
+                        <?php } ?>
+                    <button name="register-submit">Sign Up</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="../businessLogic/login.php" method="post">
                     <h1>Sign in</h1>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="email" placeholder="Email" required name="email"/>
+                    <input type="password" placeholder="Password" required name="password"/>
                     <a href="#">Forgot your password?</a>
-                    <button>Sign In</button>
+                    <button name="login-submit">Sign In</button>
                 </form>
             </div>
             <div class="overlay-container">
