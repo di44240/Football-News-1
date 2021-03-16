@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Football News | Contact</title>
-        <link rel="icon" type="image/x-icon" href="images/logo1.png"/>
-        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="icon" type="image/x-icon" href="../images/logo1.png"/>
+        <link rel="stylesheet" type="text/css" href="../css/contact.css"/>
 </head>
 
 <body>
@@ -62,7 +62,7 @@
         </div>
 	</div>
 
-	<script src="contact.js"></script>
+	<script src="../js/contact.js"></script>
             
 
 
