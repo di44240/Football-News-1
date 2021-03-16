@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Football News | Tables</title>
-        <link rel="icon" type="image/x-icon" href="table.images/logo1.png"/>
-        <link rel="stylesheet" type="text/css" href="tables.css"/>
+        <link rel="icon" type="image/x-icon" href="../table.images/logo1.png"/>
+        <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
 </head>
 
 <body>
@@ -17,11 +17,11 @@
                 </div>
                 <div class="navbar_items">
                     <ul>
-                        <li><a href="index">News</a></li>
+                        <li><a href="index.php">News</a></li>
                         <li class="menuLines">|</li>
-                        <li><a href="about">About Us</a></li>
+                        <li><a href="About Us.php">About Us</a></li>
                         <li class="menuLines">|</li>
-                        <li><a href="login">Your Account</a></li>
+                        <li><a href="Account.php">Your Account</a></li>
                         <li class="menuLines">|</li>				
                     </ul>
                 </div>

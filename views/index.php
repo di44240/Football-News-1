@@ -14,9 +14,9 @@
         <div id="topHeader">
             <div id="topHeaderFilter"></div>
             <div id="topHeaderContent">
-                <a href="index.html"><h3>Football News</h3></a>
+                <a href="index.php"><h3>Football News</h3></a>
                 <ul>
-                    <li><a href="index.html" >News</a></li>
+                    <li><a href="index.php" >News</a></li>
                     <li class="menuLines">|</li>
                     <li><a href="">Transfers</a></li>
                     <li class="menuLines">|</li>
@@ -24,7 +24,7 @@
                     <li class="menuLines">|</li>
                     <li><a href="">Leagues & Cups</a></li>
                     <li class="menuLines">|</li>
-                    <li><a href="">About Us</a></li>
+                    <li><a href="About Us.php">About Us</a></li>
                     <li class="menuLines">|</li>
                     <li><a href="">Contact</a></li>
                     </ul>
