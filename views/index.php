@@ -1,3 +1,15 @@
+<?php require_once '../controllers/NewsController.php';
+$posts = new NewsController;
+$news = $posts->showGeneralNewsDescLimit3();
+?>
+<?php
+$posts = new NewsController;
+$newsTransfers = $posts->showTrensferNewsDescLimit2();
+?>
+
+<?php
+$activePage = basename($_SERVER['PHP_SELF']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +18,12 @@
 	<title>Football News</title>
 	<link rel="icon" type="image/x-icon" href="../images/logo1.png"/>
 	<link rel="stylesheet" href="../css/style.css">
-
+	
 </head>
 <body>
 
 <header>
         <?php include "../includes/header.php" ?>
-        
         <div id="middleHeader">
             <img src="../images/stadiumPic5.jpg" alt="headerImage"/>
             <div id="headerImageFilter"></div>
@@ -24,27 +35,29 @@
 
     <main>
         <div id="news_box">
-            <a href="">
+            <a href="News.php">
                 <div class="main_box_header">
                     <h2 class="main_box_header_heading">Latest News</h2>
                     <div class="main_box_header_line"></div>
                 </div>
                 <div class="main_box_content">
+                    <?php foreach($news as $new): ?>
                     <div class="news_box_content_news">
-                        <img src="../images/serginoDest.jpg" alt="images"/>
-                        <h3 class="box_text_heading">Barcelona's US star Sergiño Dest says it's an 'honor' to play with Lionel Messi</h3>
-                        <p>Barcelona's US star Sergiño Dest says it's an 'honor' to play with Lionel Messi...</p>
+                        <img src="../uploads/<?php echo $new['image']; ?>" alt="images"/>
+                        <h3 class="box_text_heading"><?php echo $new['posts_title']; ?></h3>
+                        <p><?php echo $new['posts_highlights']; ?></p>
                     </div>
-                    <div class="news_box_content_news">
-                        <img src="../images/coutinho.jpg" alt="images"/>
+                    <!-- <div class="news_box_content_news">
+                        <img src="images/coutinho.jpg" alt="images"/>
                         <h3 class="box_text_heading">Coutinho could face several months out as Barcelona confirm meniscus surgery</h3>
                         <p>Barcelona's playmaker Philipe Coutinho will undergo arthroscopic surgery to determine the severity of an injury to his left knee. The Brazilian...</p>
                     </div>
                     <div class="news_box_content_news">
-                        <img src="../images/serginoDest.jpg" alt="images"/>
+                        <img src="images/serginoDest.jpg" alt="images"/>
                         <h3 class="box_text_heading">Barcelona's US star Sergiño Dest says it's an 'honor' to play with Lionel Messi</h3>
                         <p>Barcelona's US star Sergiño Dest says it's an 'honor' to play with Lionel Messi...</p>
-                    </div>
+                    </div> -->
+                    <?php endforeach; ?>
                 </div>
             </a>
         </div>
@@ -55,22 +68,29 @@
                     <div class="main_box_header_line"></div>
                 </div>
                 <div class="main_box_content">
+                <?php foreach($newsTransfers as $newsT): ?>
                     <div class="news_box_content_news2">
-                        <img src="../images/transferWindow.jpg" alt="images"/>
+                        <img src="../uploads/<?php echo $newsT['image']; ?>" alt="images"/>
+                        <h3 class="box_text_heading2"><?php echo $newsT['posts_title']; ?></h3>
+                        <p><?php echo $newsT['posts_highlights']; ?></p>
+                    </div>
+                    <?php endforeach; ?>
+                    <!-- <div class="news_box_content_news2">
+                        <img src="images/transferWindow.jpg" alt="images"/>
                         <h3 class="box_text_heading2">January 2021 Transfer Window: The Biggest Names to Watch and the Free Agents to be</h3>
                         <p>The new year means the opening of a new transfer window across Europe, and clubs, playes and agents alike are bracing for yet another...</p>
                     </div>
                     <div class="news_box_content_news2">
-                        <img src="../images/ErlingHaaland.jpg" alt="images"/>
+                        <img src="images/ErlingHaaland.jpg" alt="images"/>
                         <h3 class="box_text_heading2">Real Madrid prepare a shocking galactico swap deal offer for Erling Haaland</h3>
                         <p>Real Madrid have reportedly come up with a plan to sign Erling Haaland of Borussia Dortmund. Los Blancos ready to offer the Germans an...</p>
-                    </div>
+                    </div> -->
                 </div>
             </a>
         </div>
         <div id="contactBox">
             <h3>Have some questions?</h3>
-            <a href="" class="Contact.php">Contact US</a>
+            <a href="Contact.php" class="contactUs">Contact US</a>
         </div>
         <div id="slideshow">
             <div id="slideshow_header">
@@ -98,6 +118,6 @@
     </footer>
 
     <script src="../js/indexJS.js"></script>
-
+	
 </body>
-</html> 
+</html>
