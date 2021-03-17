@@ -1,14 +1,15 @@
 <?php
-    require_once '../controllers/MenuController.php';
+require '../controllers/ContactController.php';
 
-    $menu = new MenuController;
-    $menus = $menu->all();
+$query = new ContactController;
+$contacts = $query->allDesc();
+if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1){
 ?>
 <!DOCTYPE html>
  <html lang="en">
 <head>
     <meta charset = "UTF-8">
-    <title>Football News | Menu</title>
+    <title>Football News | Feedback</title>
     <link rel = "stylesheet" href="../css/dashboard_style1.css">
 </head>
 
@@ -25,23 +26,23 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="../views/dashboard.php"><span class="la-dashboard"></span>
+                    <a href="dashboard.php"><span class="la-dashboard"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                   <a href="../views/dashboard_create.php"><span class="users"></span>
+                    <a href="dashboard_create.php"><span class="users"></span>
                     <span>Users</span></a>
                 </li>
                 <li>
-                    <a href="../views/dashboard_menu.php" class="active"><span class="menu"></span>
+                    <a href="dashboard_menu.php"><span class="menu"></span>
                     <span>Menu</span></a>
                 </li> 
                 <li>
-                    <a href="../views/dashboard_news.php" ><span class="news"></span>
+                    <a href="dashboard_news.php"><span class="news"></span>
                     <span>News</span></a>
                 </li> 
                 <li>
-                    <a href="../views/dashboard_contact.php"><span class="feedback"></span>
+                    <a href="dashboard_contact.php" class="active"><span class="feedback"></span>
                     <span>Feedback</span></a>
                 </li>
             </ul>
@@ -65,50 +66,54 @@
                 </div>
                 </div>
             </header>
-    <style>
+
+<br><br><br><br><br>
+
+<style>
         table, th, td {
             border: 2px solid black;
             border-collapse: collapse;
         }
         th, td {
-            padding: 7px;
+            padding: 10px;
         }
-    </style>
-</head>
-<body>
-    <?php if(isset($_SESSION['name'])): ?>
- 
-        <br>
-    <h1>Menu List</h1>
-    <br><br><br><br>
-    <table style="border: 3px solid black;">
+</style>
+<div class="contact">
+<table style="border: 3px solid black;">
         <thead style="border: 3px solid black;">
             <tr>
                 <th>ID</th>
-                <th>Menu Name</th>
-                <th  colspan="2">Actions</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Reason</th>
+                <th>Mesazhi</th>
+                <th>Actions</th>
             </tr>
         </thead>
         
-            <?php foreach($menus as $menu): ?>
+            <?php foreach($contacts as $contact): ?>
                 <tr>
                 <div class="box">
-                <td><h2><?php echo $menu['menu_id']; ?></h2></td>
-                <td><h2><?php echo $menu['menu_name']; ?></h2></td>
-                <td><a href="edit-menu.php?id=<?php echo $menu['menu_id']; ?>">Edit</a></td>
-                <td><a href="delete-menu.php?id=<?php echo $menu['menu_id']; ?>">Delete</a></td>
+                <td><h2><?php echo $contact['id']; ?></h2></td>
+                <td><b><?php echo $contact['firstname']; ?></b></td>
+                <td><b><?php echo $contact['lastname']; ?></b></td>
+                <td><b><?php echo $contact['email']; ?></b></td>
+                <td><h3><?php echo $contact['reason']; ?></h3></td>
+                <td><h3><?php echo $contact['mesazhi']; ?></h3></td>
+                <td><a href="delete_contact.php?id=<?php echo $contact['id']; ?>">Delete</a></td>
                 </div>
                 </tr>
             <?php endforeach; ?>
         </tbody>
-    </table>
-    </br></br>
-    <h3><a style="border: 2px solid black;padding: 7px;color: green;text-decoration:none;" href="add_menu.php"><b>Add a menu</b></a></h3>
-    </br></br>
-</body>
-</html>
+    </table><br><br>
+<br><br><br>
+</div>
+<?php } else{ ?>
+  <li><a href="../views/Account.php">Log in</a></li>
+  <li><a href="../views/Account.php">Sign up</a></li>
+<?php } ?>
 
-<?php else: ?>
-        <li><a href="../views/Account.php">Login</a></li>
-        <li><a href="../views/Account.php">Signup</a></li>
-    <?php endif; ?>
+        </div>
+</body>
+ </html>

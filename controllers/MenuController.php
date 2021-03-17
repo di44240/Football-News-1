@@ -51,6 +51,6 @@ class MenuController
         $query = $this->db->pdo->prepare('DELETE FROM menu WHERE menu_id = :id');
         $query->execute(['id' => $id]);
 
-        return header('Location: ./dashboard.php');
+        return header('Location: ../views/dashboard.php');
     }
 }

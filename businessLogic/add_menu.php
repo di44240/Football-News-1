@@ -12,7 +12,7 @@
 <head>
     <meta charset = "UTF-8">
     <title>Football News | Menu</title>
-    <link rel = "stylesheet" href="../views/d/style1.css">
+    <link rel = "stylesheet" href="../css/dashboard_style1.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="../views/dashboard1.php"><span class="la-dashboard"></span>
+                    <a href="../views/dashboard.php"><span class="la-dashboard"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </h2>
 
                 <div class="user-wrapper">
-                    <img src="d/wall.jpg" width="40px" height="30px" alt="">
+                    <img src="../images/wall.jpg" width="40px" height="30px" alt="">
                 <div>
                     <h4> <a href="dashboard_create.php"><?php echo $_SESSION['name']; ?> </h4>
                     <small><a href=Account.php>Log out</a></small>

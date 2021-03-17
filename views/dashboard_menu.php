@@ -1,24 +1,15 @@
 <?php
-    require '../controllers/UserController.php';
+    require_once '../controllers/UserController.php';
 
     $user = new UserController;
-    if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1){
-
-    if(isset($_GET['id'])) {
-        $userId = $_GET['id'];
-    }
-
-    $currenUser = $user->edit($userId);
-
-    if(isset($_POST['submitted'])) {
-        $user->update($userId, $_POST);
-    }
+    $users = $user->all();
 ?>
+<!DOCTYPE html>
 <!DOCTYPE html>
  <html lang="en">
 <head>
     <meta charset = "UTF-8">
-    <title>Football News | Users</title>
+    <title>Football News | Menu</title>
     <link rel = "stylesheet" href="../css/dashboard_style1.css">
 </head>
 
@@ -35,23 +26,23 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="../views/dashboard.php"><span class="la-dashboard"></span>
+                    <a href="dashboard.php"><span class="la-dashboard"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                   <a href="../views/dashboard_create.php" class="active"><span class="users"></span>
+                    <a href="dashboard_create.php"><span class="users"></span>
                     <span>Users</span></a>
                 </li>
                 <li>
-                    <a href="../views/dashboard_menu.php"><span class="menu"></span>
+                    <a href="dashboard_menu.php" class="active"><span class="menu"></span>
                     <span>Menu</span></a>
                 </li> 
                 <li>
-                    <a href="../views/dashboard_news.php"><span class="news"></span>
+                    <a href="dashboard_news.php"><span class="news"></span>
                     <span>News</span></a>
                 </li> 
                 <li>
-                    <a href="../views/dashboard_contact.php"><span class="feedback"></span>
+                    <a href="dashboard_contact.php"><span class="feedback"></span>
                     <span>Feedback</span></a>
                 </li>
             </ul>
@@ -75,18 +66,12 @@
                 </div>
                 </div>
             </header>
-<body>
-    <br><br><br><br><br>
-    <form action="" method="POST">
-        Name: <input type="text" value="<?php echo $currenUser['name']; ?>" name="fullName"><br><br>
-        Email: <input type="text" value="<?php echo $currenUser['email']; ?>" name="email"><br><br>
-        Admin: <input type="checkbox" <?php echo $currenUser['roli'] === '1' ? 'checked' : '' ?> name="roli"><br><br>
-        <button type="submit" name="submitted">UPDATE</button>
-    </form>
-</body>
-</html>
+<br>
+ <h1>Menu</h1>
+ <br><br><br>
+    <h3><a style="border: 2px solid black;padding: 7px;color: green;text-decoration:none;" href="../businessLogic/show-menu.php"><b>Show menu list...</b></a></h3>
+    </br></br>
 
-<?php } else{ ?>
-  <li><a href="../views/Account.php">Log in</a></li>
-  <li><a href="../views/Account.php">Sign up</a></li>
-<?php } ?>
+        </div>
+</body>
+ </html>

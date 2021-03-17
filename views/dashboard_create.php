@@ -1,14 +1,15 @@
 <?php
-    require_once '../controllers/MenuController.php';
+    require_once '../controllers/UserController.php';
 
-    $menu = new MenuController;
-    $menus = $menu->all();
+    $user = new UserController;
+    $users = $user->all();
 ?>
+<!DOCTYPE html>
 <!DOCTYPE html>
  <html lang="en">
 <head>
     <meta charset = "UTF-8">
-    <title>Football News | Menu</title>
+    <title>Football News | Users</title>
     <link rel = "stylesheet" href="../css/dashboard_style1.css">
 </head>
 
@@ -25,23 +26,23 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="../views/dashboard.php"><span class="la-dashboard"></span>
+                    <a href="dashboard.php"><span class="la-dashboard"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                   <a href="../views/dashboard_create.php"><span class="users"></span>
+                    <a href="dashboard_create.php" class="active"><span class="users"></span>
                     <span>Users</span></a>
                 </li>
                 <li>
-                    <a href="../views/dashboard_menu.php" class="active"><span class="menu"></span>
+                    <a href="dashboard_menu.php"><span class="menu"></span>
                     <span>Menu</span></a>
                 </li> 
                 <li>
-                    <a href="../views/dashboard_news.php" ><span class="news"></span>
+                    <a href="dashboard_news.php"><span class="news"></span>
                     <span>News</span></a>
                 </li> 
                 <li>
-                    <a href="../views/dashboard_contact.php"><span class="feedback"></span>
+                    <a href="dashboard_contact.php"><span class="feedback"></span>
                     <span>Feedback</span></a>
                 </li>
             </ul>
@@ -60,55 +61,40 @@
                 <div class="user-wrapper">
                     <img src="../images/wall.jpg" width="40px" height="30px" alt="">
                 <div>
-                    <h4> <a href="dashboard_create.php"><?php echo $_SESSION['name']; ?> </h4>
+                    <h4> <a href="dashboard_create.php"> <?php echo $_SESSION['name']; ?> </h4>
                     <small><a href=Account.php>Log out</a></small>
                 </div>
                 </div>
             </header>
-    <style>
-        table, th, td {
-            border: 2px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 7px;
-        }
-    </style>
-</head>
-<body>
-    <?php if(isset($_SESSION['name'])): ?>
- 
-        <br>
-    <h1>Menu List</h1>
-    <br><br><br><br>
+
+<br>
+<h1>Users</h1>
+    <br><br>
+    <a href="Account.php">Create User</a><br><br>
     <table style="border: 3px solid black;">
         <thead style="border: 3px solid black;">
             <tr>
                 <th>ID</th>
-                <th>Menu Name</th>
+                <th>Name</th>
+                <th>Email</th>
                 <th  colspan="2">Actions</th>
             </tr>
         </thead>
         
-            <?php foreach($menus as $menu): ?>
+            <?php foreach($users as $user): ?>
                 <tr>
                 <div class="box">
-                <td><h2><?php echo $menu['menu_id']; ?></h2></td>
-                <td><h2><?php echo $menu['menu_name']; ?></h2></td>
-                <td><a href="edit-menu.php?id=<?php echo $menu['menu_id']; ?>">Edit</a></td>
-                <td><a href="delete-menu.php?id=<?php echo $menu['menu_id']; ?>">Delete</a></td>
+                <td><h2><?php echo $user['users_id']; ?></h2></td>
+                <td><h2><?php echo $user['name']; ?></h2></td>
+                <td><h3><?php echo $user['email']; ?></h3></td>
+                <td><a href="../businessLogic/edit-user.php?id=<?php echo $user['users_id']; ?>">Edit</a></td>
+                <td><a href="../businessLogic/delete-user.php?id=<?php echo $user['users_id']; ?>">Delete</a></td>
                 </div>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-    </br></br>
-    <h3><a style="border: 2px solid black;padding: 7px;color: green;text-decoration:none;" href="add_menu.php"><b>Add a menu</b></a></h3>
-    </br></br>
-</body>
-</html>
 
-<?php else: ?>
-        <li><a href="../views/Account.php">Login</a></li>
-        <li><a href="../views/Account.php">Signup</a></li>
-    <?php endif; ?>
+        </div>
+</body>
+ </html>
