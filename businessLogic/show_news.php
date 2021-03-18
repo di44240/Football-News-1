@@ -19,7 +19,7 @@ $newsdata = $posts->allDesc();
     <div class="sidebar">
         <div class="sidebar-brand">
         <div class="logo">
-                <a href="index.php"><h3>Football News</h3></a>
+                <a href="../views/index.php"><h3>Football News</h3></a>
             </div>
         </div>
     
@@ -52,12 +52,12 @@ $newsdata = $posts->allDesc();
         <div class="main-content">
            <br>
 <?php if(isset($_SESSION['name'])): ?>
-</br></br><a style="border: 2px solid black;padding: 10px;background:green;color: white;text-decoration:none;"> Add news</a></br></br></br>
+</br></br><a style="border: 2px solid black;padding: 10px;background:green;color: white;text-decoration:none;" href="add_news.php"> Add news</a></br></br></br>
 <div class="news">
 <?php foreach($newsdata as $news):?>
 <hr>
 <div class="news-box">
-<a href=""<?php echo $news['posts_id']; ?>"><h2>Titulli: <?php echo $news['posts_title']; ?></h2></a> </h2></a>
+<a href=""><h2>Titulli: <?php echo $news['posts_title']; ?></h2></a>
 <p><?php echo $news['posts_highlights']; ?></p>
 <img src="../uploads/<?php echo $news['image']; ?>" width="400" />
 <h4>Post category:  <?php echo $news['category_name']; ?></h4>

@@ -57,7 +57,7 @@ if(isset($_SESSION['roli']) && $_SESSION['roli'] == 1){
     <div class="sidebar">
         <div class="sidebar-brand">
         <div class="logo">
-                <a href="index.php"><h3>Football News</h3></a>
+                <a href="../views/index.php"><h3>Football News</h3></a>
             </div>
         </div>
     
