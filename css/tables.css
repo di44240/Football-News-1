@@ -85,7 +85,7 @@
 
 
 #pleague{
-	background-image: url("../table.images/pleague.jpg") ;
+	background-image: url("../images/pleague.jpg") ;
 	background-size: cover ;
 	padding: 10px;
 	margin: 0;
@@ -93,28 +93,28 @@
     
 }
 #laliga{
-	background-image: url("../table.images/laliga.jpg") ;
+	background-image: url("../images/laliga.jpg") ;
 	background-size: cover ;
 	padding: 10px;
 	margin: 0;
     
 }
 #seriea{
-	background-image: url("../table.images/seriea.jpg") ;
+	background-image: url("../images/seriea.jpg") ;
 	background-size: cover ;
 	padding: 10px;
 	margin: 0;
     
 }
 #bundesliga{
-	background-image: url("../table.images/bundesliga.jpg") ;
+	background-image: url("../images/bundesliga.jpg") ;
 	background-size: cover ;
 	padding: 10px;
 	margin: 0;
     
 }
 #lig1{
-	background-image: url("../table.images/lig1.jpg") ;
+	background-image: url("../images/lig1.jpg") ;
 	background-size: cover ;
 	padding: 10px;
 	margin: 0;

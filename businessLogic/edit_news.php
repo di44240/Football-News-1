@@ -29,7 +29,7 @@ if(isset($_POST['submitted'])){
     <div class="sidebar">
         <div class="sidebar-brand">
         <div class="logo">
-                <a href="index.php"><h3>Football News</h3></a>
+                <a href="../views/index.php"><h3>Football News</h3></a>
             </div>
         </div>
     
@@ -69,15 +69,16 @@ if(isset($_POST['submitted'])){
                 </h2>
 
                 <div class="user-wrapper">
-                    <img src="wall.jpg" width="40px" height="30px" alt="">
+                    <img src="../images/wall.jpg" width="40px" height="30px" alt="">
                 <div>
                     <h4> <a href="dashboard_create.php"><?php echo $_SESSION['name']; ?> </h4>
-                    <small><a href=Account.php>Log out</a></small>
+                    <small><a href="../views/Account.php">Log out</a></small>
                 </div>
                 </div>
             </header>
 
-<form action="" method="post">
+<br><br><br><br><br>
+<form style="margin-left: 2%;" action="" method="post">
 <h4>Ky eshte titulli i lajmit: </h4><input type="text" name="title" value="<?php echo $edit['posts_title']; ?>" style="width: 400px;"/><br><br>
 <h4>Kjo eshte permbajtja i lajmit: </h4><textarea rows="14" cols="100" name="body"><?php echo $edit['posts_body']; ?></textarea><br><br>
 <h4>Keto jane pikat kryesore te lajmit(highlights): </h4><input type="text" name="highlights" value="<?php echo $edit['posts_highlights']; ?>" style="width: 500px;"/><br><br>

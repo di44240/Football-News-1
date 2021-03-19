@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Football News | Tables</title>
-        <link rel="icon" type="image/x-icon" href="../table.images/logo1.png"/>
+        <link rel="icon" type="image/x-icon" href="../images/logo1.png"/>
         <link rel="stylesheet" type="text/css" href="../css/tables.css"/>
 </head>
 
